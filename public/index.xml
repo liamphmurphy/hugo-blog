@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Liam Murphy - Golang, API Development, Linux, Open Source, and more.</title>
+    <link>https://example.org/</link>
+    <description>Recent content on Liam Murphy - Golang, API Development, Linux, Open Source, and more.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Dec 2021 01:11:39 -0500</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://example.org/blog/my-first-post/</link>
+      <pubDate>Wed, 22 Dec 2021 01:11:39 -0500</pubDate>
+      
+      <guid>https://example.org/blog/my-first-post/</guid>
+      <description>Test Heading With some test text</description>
+      <content>&lt;h1 id=&#34;test-heading&#34;&gt;Test Heading&lt;/h1&gt;
+&lt;p&gt;With some test text&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://example.org/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/about/</guid>
+      <description>Hello there! My name is Liam Murphy, a software developer who (like many others) is interested in open-source, tech, and how software can be used to make our daily lives at least a little bit easier. If you would like to indulge my ego and read a bit more about me, below is some more information!
+Day Job Usual disclaimer: Everything expressed on this website is my own opinion; and not that of my employer(s).</description>
+      <content>&lt;p&gt;Hello there! My name is Liam Murphy, a software developer who (like many others) is interested in open-source, tech, and how software can be used to make our daily lives at least a little bit easier. If you would like to indulge my ego and read a bit more about me, below is some more information!&lt;/p&gt;
+&lt;h2 id=&#34;day-job&#34;&gt;Day Job&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Usual disclaimer: Everything expressed on this website is my own opinion; and not that of my employer(s).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Currently I work as a Developer on the API Services team at &lt;a href=&#34;https://www.gannett.com/&#34;&gt;Gannett&lt;/a&gt;, known for owning one of the most visited digital news websites, &lt;a href=&#34;https://www.usatoday.com&#34;&gt;USA TODAY&lt;/a&gt;. As the team name implies, I spend most of my time working on the design and implementation of API&amp;rsquo;s for internal use within the company; I work with GraphQL and REST. We&amp;rsquo;re a Go shop (which happens to be my favorite language as of right now) and since this is my first job out of college, I&amp;rsquo;m still very much in &amp;ldquo;learning mode&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;personal&#34;&gt;Personal&lt;/h2&gt;
+&lt;p&gt;I currently reside in the beautiful Pacific Northwest city of Portland, Oregon.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Liam Murphy - Home</title>
+      <link>https://example.org/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/home/</guid>
+      <description>This is the home page!</description>
+      <content>&lt;p&gt;This is the home page!&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Social Media</title>
+      <link>https://example.org/socials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/socials/</guid>
+      <description>As the young (hip? cool?) kids would say, here is a list of some of my &amp;ldquo;socials&amp;rdquo;. Feel free to reach out!
+ Twitter LinkedIn  </description>
+      <content>&lt;p&gt;As the young (hip? cool?) kids would say, here is a list of some of my &amp;ldquo;socials&amp;rdquo;. Feel free to reach out!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.twitter.com/LimePH&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/liamphmurphy/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

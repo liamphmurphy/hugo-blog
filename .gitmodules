@@ -1,0 +1,9 @@
+[submodule "themes/ink"]
+	path = themes/ink
+	url = https://github.com/knadh/hugo-ink.git
+[submodule "themes/pulp"]
+	path = themes/pulp
+	url = https://github.com/koirand/pulp.git
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git

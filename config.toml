@@ -1,0 +1,88 @@
+baseurl = "https://example.org"
+languageCode = "en-us"
+theme = "terminal"
+paginate = 10
+
+[params]
+  # dir name of your main content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "blog"
+
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "green"
+
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 10
+
+  # show selector to switch language
+  showLanguageSelector = false
+
+  # set theme to full screen width
+  fullWidthTheme = false
+
+  # center theme with default width
+  centerTheme = true
+
+  # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+  # then the file will be used as a cover automatically.
+  # With this option you don't have to put the `cover` param in a front-matter.
+  autoCover = true
+
+  # set post to show the last updated
+  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+  showLastUpdated = false
+
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
+
+  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+  # updatedDatePrefix = "Updated"
+
+  # set all headings to their default size (depending on browser settings)
+  # it's set to `true` by default
+  # oneHeadingSize = false
+
+
+[params.twitter]
+  # set Twitter handles for Twitter cards
+  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+  # do not include @
+  creator = "Liam Murphy"
+  site = "https://twitter.com/LimePH"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Liam Murphy - Golang, API Development, Linux, Open Source, and more."
+    subtitle = "Liam Murphy's blog to discuss software development, open-source, tech, etc."
+    owner = "Liam Murphy"
+    keywords = "golang, api, api development, linux, open-source, open source, software, software development"
+    copyright = ""
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    missingContentMessage = "Page not found..."
+    missingBackButtonLabel = "Back to home page"
+
+    [languages.en.params.logo]
+      logoText = "Liam Murphy - Golang, API Development, Linux, and more."
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+        weight = 2
+      [[languages.en.menu.main]]
+        identifier = "socials"
+        name = "Socials"
+        url = "/socials"
+        weight = 3
