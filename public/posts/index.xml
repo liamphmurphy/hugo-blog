@@ -34,7 +34,7 @@ to create separate &amp;ldquo;environments&amp;rdquo; from their base system whe
 &lt;h1 id=&#34;my-personal-use-case&#34;&gt;My Personal Use Case&lt;/h1&gt;
 &lt;p&gt;I love Fedora, and made it my distribution of choice on my new Framework laptop (post coming soon on it?). However, despite its bleeding-edge approach to packages, there were two packages that weren&amp;rsquo;t quite up to date as much as I&amp;rsquo;d like:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Hugo&lt;/strong&gt; (which is what I used to build this site), which at the time of writing, was on version &amp;lsquo;80&amp;rsquo; making it ~10 versions behind the latest.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hugo&lt;/strong&gt; (which is what I used to build this site), which at the time of writing, was on version &amp;lsquo;0.80&amp;rsquo; making it ~10 versions behind the latest.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Go&lt;/strong&gt;. Fedora has the latest patches for version 1.16, however at the time of writing, 1.17 is the latest version and not available in the Fedora 35 repos.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;As it turns out, using a container is a perfect way to solve this. But see the problem with Toolbox in this scenario? All I&amp;rsquo;d be doing is replicating a Fedora environment in a Toolbox container (and thus, using the &amp;lsquo;older&amp;rsquo; versions I don&amp;rsquo;t want to use), so that wouldn&amp;rsquo;t help me out much.&lt;/p&gt;
@@ -50,8 +50,9 @@ to create separate &amp;ldquo;environments&amp;rdquo; from their base system whe
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;distrobox-enter --name dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And voila, that terminal session will be entered into the &lt;code&gt;dev&lt;/code&gt; container. I was able to use pacman to install Hugo / Go, and continue on my merry-way.&lt;/p&gt;
 &lt;h1 id=&#34;wsl&#34;&gt;WSL&lt;/h1&gt;
-&lt;p&gt;As a new developer who is still trying to figure out shortcuts / new ways of tackling issues in my workflow, I want to give a shoutout to WSL for making me aware of how this containerized approach can help me. Specifically, WSL 2 with its GUI support allowed me to install Firefox using an Arch image in WSL, and it showed up in the start menu without an issue.&lt;/p&gt;
-&lt;p&gt;I do not prefer using Windows as a development machine, but this was a workflow addition I was happy to see Distrobox make easy on Linux.&lt;/p&gt;
+&lt;p&gt;As a new developer who is still trying to figure out shortcuts / new ways of tackling issues in my workflow, I want to give a shout-out to WSL for making me aware of how this containerized approach can help me. Specifically, WSL 2 with its GUI support allowed me to install Firefox using an Arch image in WSL, and it showed up in the start menu without an issue. I don&amp;rsquo;t have many practical uses for this, but it was very cool to see work!&lt;/p&gt;
+&lt;p&gt;I do not prefer using Windows as a development machine, but this was a workflow addition I was happy to see Distrobox make easy on Linux, and WSL made me aware of it.&lt;/p&gt;
+&lt;p&gt;As a side note, I&amp;rsquo;m curious on whether it&amp;rsquo;d be possible for GUI applications in Distrobox to show up as a desktop application on the base system. As a Fedora user, I could see the benefit of installing a lesser-known GUI application from the AUR, but be able to easily access it from my search menu, as if it was natively installed.&lt;/p&gt;
 </content>
     </item>
     

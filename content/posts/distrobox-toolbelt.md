@@ -1,6 +1,7 @@
 ---
 title: "Distrobox - A great item in the Linux toolbelt"
 date: 2021-12-23T01:11:39-05:00
+description: "This post discusses my use case for Distrobox; and a brief comparison with Toolbox."
 draft: false
 ---
 
@@ -29,7 +30,7 @@ I'm going to focus on and discuss #2 in the above list.
 
 I love Fedora, and made it my distribution of choice on my new Framework laptop (post coming soon on it?). However, despite its bleeding-edge approach to packages, there were two packages that weren't quite up to date as much as I'd like:
 
-1. **Hugo** (which is what I used to build this site), which at the time of writing, was on version '80' making it ~10 versions behind the latest. 
+1. **Hugo** (which is what I used to build this site), which at the time of writing, was on version '0.80' making it ~10 versions behind the latest. 
 2. **Go**. Fedora has the latest patches for version 1.16, however at the time of writing, 1.17 is the latest version and not available in the Fedora 35 repos. 
 
 As it turns out, using a container is a perfect way to solve this. But see the problem with Toolbox in this scenario? All I'd be doing is replicating a Fedora environment in a Toolbox container (and thus, using the 'older' versions I don't want to use), so that wouldn't help me out much.
@@ -64,6 +65,8 @@ And voila, that terminal session will be entered into the `dev` container. I was
 
 # WSL
 
-As a new developer who is still trying to figure out shortcuts / new ways of tackling issues in my workflow, I want to give a shoutout to WSL for making me aware of how this containerized approach can help me. Specifically, WSL 2 with its GUI support allowed me to install Firefox using an Arch image in WSL, and it showed up in the start menu without an issue.
+As a new developer who is still trying to figure out shortcuts / new ways of tackling issues in my workflow, I want to give a shout-out to WSL for making me aware of how this containerized approach can help me. Specifically, WSL 2 with its GUI support allowed me to install Firefox using an Arch image in WSL, and it showed up in the start menu without an issue. I don't have many practical uses for this, but it was very cool to see work!
 
-I do not prefer using Windows as a development machine, but this was a workflow addition I was happy to see Distrobox make easy on Linux. 
+I do not prefer using Windows as a development machine, but this was a workflow addition I was happy to see Distrobox make easy on Linux, and WSL made me aware of it. 
+
+As a side note, I'm curious on whether it'd be possible for GUI applications in Distrobox to show up as a desktop application on the base system. As a Fedora user, I could see the benefit of installing a lesser-known GUI application from the AUR, but be able to easily access it from my search menu, as if it was natively installed. 

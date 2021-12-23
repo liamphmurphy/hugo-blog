@@ -45,9 +45,7 @@
 <meta property="og:url" content="https://phmurphy.com/posts/distrobox-toolbelt/" />
 <meta property="og:site_name" content="Liam Murphy - Golang, API Development, Linux, Open Source, and more." />
 
-  
-    <meta property="og:image" content="https://phmurphy.com/img/favicon/green.png">
-  
+  <meta property="og:image" content="https://phmurphy.com/distrobox.png">
 
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
@@ -149,6 +147,10 @@
 
   
   
+  <img src="https://phmurphy.com/distrobox.png"
+    class="post-cover"
+    alt="Distrobox - A great item in the Linux toolbelt"
+    title="Cover Image" />
 
 
   
@@ -174,7 +176,7 @@ to create separate &ldquo;environments&rdquo; from their base system where they 
 <h1 id="my-personal-use-case">My Personal Use Case<a href="#my-personal-use-case" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>I love Fedora, and made it my distribution of choice on my new Framework laptop (post coming soon on it?). However, despite its bleeding-edge approach to packages, there were two packages that weren&rsquo;t quite up to date as much as I&rsquo;d like:</p>
 <ol>
-<li><strong>Hugo</strong> (which is what I used to build this site), which at the time of writing, was on version &lsquo;80&rsquo; making it ~10 versions behind the latest.</li>
+<li><strong>Hugo</strong> (which is what I used to build this site), which at the time of writing, was on version &lsquo;0.80&rsquo; making it ~10 versions behind the latest.</li>
 <li><strong>Go</strong>. Fedora has the latest patches for version 1.16, however at the time of writing, 1.17 is the latest version and not available in the Fedora 35 repos.</li>
 </ol>
 <p>As it turns out, using a container is a perfect way to solve this. But see the problem with Toolbox in this scenario? All I&rsquo;d be doing is replicating a Fedora environment in a Toolbox container (and thus, using the &lsquo;older&rsquo; versions I don&rsquo;t want to use), so that wouldn&rsquo;t help me out much.</p>
@@ -190,8 +192,9 @@ to create separate &ldquo;environments&rdquo; from their base system where they 
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">distrobox-enter --name dev
 </code></pre></div><p>And voila, that terminal session will be entered into the <code>dev</code> container. I was able to use pacman to install Hugo / Go, and continue on my merry-way.</p>
 <h1 id="wsl">WSL<a href="#wsl" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<p>As a new developer who is still trying to figure out shortcuts / new ways of tackling issues in my workflow, I want to give a shoutout to WSL for making me aware of how this containerized approach can help me. Specifically, WSL 2 with its GUI support allowed me to install Firefox using an Arch image in WSL, and it showed up in the start menu without an issue.</p>
-<p>I do not prefer using Windows as a development machine, but this was a workflow addition I was happy to see Distrobox make easy on Linux.</p>
+<p>As a new developer who is still trying to figure out shortcuts / new ways of tackling issues in my workflow, I want to give a shout-out to WSL for making me aware of how this containerized approach can help me. Specifically, WSL 2 with its GUI support allowed me to install Firefox using an Arch image in WSL, and it showed up in the start menu without an issue. I don&rsquo;t have many practical uses for this, but it was very cool to see work!</p>
+<p>I do not prefer using Windows as a development machine, but this was a workflow addition I was happy to see Distrobox make easy on Linux, and WSL made me aware of it.</p>
+<p>As a side note, I&rsquo;m curious on whether it&rsquo;d be possible for GUI applications in Distrobox to show up as a desktop application on the base system. As a Fedora user, I could see the benefit of installing a lesser-known GUI application from the AUR, but be able to easily access it from my search menu, as if it was natively installed.</p>
 
       </div></div>
 
