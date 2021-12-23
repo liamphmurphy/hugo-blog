@@ -77,12 +77,17 @@ paginate = 10
         url = "/"
         weight = 1
       [[languages.en.menu.main]]
+        identifier = "blog"
+        name = "BLog"
+        url = "/posts"
+        weight = 2
+      [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
         url = "/about"
-        weight = 2
+        weight = 3
       [[languages.en.menu.main]]
         identifier = "socials"
         name = "Socials"
         url = "/socials"
-        weight = 3
+        weight = 4
