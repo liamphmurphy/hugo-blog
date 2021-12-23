@@ -68,13 +68,13 @@ paginate = 10
 
     [languages.en.params.logo]
       logoText = "Liam Murphy - Golang, API Development, Linux, and more."
-      logoHomeLink = "/"
+      logoHomeLink = "/blog"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "home"
         name = "Home"
-        url = "/"
+        url = "/blog"
         weight = 1
       [[languages.en.menu.main]]
         identifier = "about"
