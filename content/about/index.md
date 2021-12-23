@@ -13,7 +13,9 @@ Currently I work as a Developer on the API Services team at [Gannett](https://ww
 
 ## Personal
 
-I currently reside in the beautiful Pacific Northwest city of Portland, Oregon. 
+I currently reside in the beautiful Pacific Northwest city of Portland, Oregon. When I'm not coding, I try to spend my time exercising (and discovering the many hikes in my area), trying new breweries / taphouses with friends, failing to play a song on the guitar, reading a fantasy novel, or spending my free time learning about programming stuff even though I should probably take a break from that since I program for a living...
+
+
 
 
 
