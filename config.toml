@@ -1,4 +1,4 @@
-baseurl = "https://www.phmurphy.com"
+baseurl = "https://phmurphy.com"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 10
