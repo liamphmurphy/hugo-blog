@@ -6,16 +6,52 @@
     <description>Recent content in Posts on Liam Murphy - Golang, API Development, Linux, Open Source, and more.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Dec 2021 01:11:39 -0500</lastBuildDate><atom:link href="https://phmurphy.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Dec 2021 01:11:39 -0500</lastBuildDate><atom:link href="https://phmurphy.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>https://phmurphy.com/posts/my-first-post/</link>
-      <pubDate>Wed, 22 Dec 2021 01:11:39 -0500</pubDate>
+      <title>Distrobox - A great item in the Linux toolbelt</title>
+      <link>https://phmurphy.com/posts/distrobox-toolbelt/</link>
+      <pubDate>Thu, 23 Dec 2021 01:11:39 -0500</pubDate>
       
-      <guid>https://phmurphy.com/posts/my-first-post/</guid>
-      <description>Test Heading With some test text</description>
-      <content>&lt;h1 id=&#34;test-heading&#34;&gt;Test Heading&lt;/h1&gt;
-&lt;p&gt;With some test text&lt;/p&gt;
+      <guid>https://phmurphy.com/posts/distrobox-toolbelt/</guid>
+      <description>What is Distrobox? Per their Github Page, Distrobox is a way to &amp;ldquo;use any Linux distribution inside your terminal&amp;rdquo; using either Podman or Docker. In a sense, Distrobox is a simple front-end for Podman/Docker to easily create containers using any Linux environment of your choosing (as long as that environment has a container image), and providing some nice OOTB features such as being able to launch graphical apps, access external USB devices, etc.</description>
+      <content>&lt;h1 id=&#34;what-is-distrobox&#34;&gt;What is Distrobox?&lt;/h1&gt;
+&lt;p&gt;Per their &lt;a href=&#34;https://github.com/89luca89/distrobox&#34;&gt;Github Page&lt;/a&gt;, Distrobox is a way to &amp;ldquo;use any Linux distribution inside your terminal&amp;rdquo; using either Podman or Docker. In a sense, Distrobox is a simple front-end for Podman/Docker to easily create containers using any Linux environment of your choosing (as long as that environment has a container image), and providing some nice OOTB features such as being able to launch graphical apps, access external USB devices, etc. This is possible without Distrobox, but it does make it a lot simpler.&lt;/p&gt;
+&lt;h1 id=&#34;containerization&#34;&gt;Containerization&lt;/h1&gt;
+&lt;p&gt;Containerization, from the perspective of a developer on their local machine, provides a great benefit in the ability
+to create separate &amp;ldquo;environments&amp;rdquo; from their base system where they can tinker with new languages, libraries, etc, without the fear of potentially breaking their base system in some way.&lt;/p&gt;
+&lt;p&gt;On Fedora systems, there is a handy tool called &lt;a href=&#34;https://github.com/containers/toolbox&#34;&gt;Toolbox&lt;/a&gt;, so why not use Toolbox instead (since I am currently using Fedora)?&lt;/p&gt;
+&lt;h1 id=&#34;so-how-is-distrobox-different&#34;&gt;So, How is Distrobox Different?&lt;/h1&gt;
+&lt;p&gt;At the risk of over-simplifying Distrobox, from my perspective, it does two things differently from any other solution right now;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Distrobox is a series of POSIX shell scripts, making compatibility a primary feature, whereas Toolbox is a Go program that is geared toward Fedora systems.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One of Distrobox&amp;rsquo;s primary goals it to support the containerization of &amp;ldquo;any&amp;rdquo; Linux environment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I&amp;rsquo;m going to focus on and discuss #2 in the above list.&lt;/p&gt;
+&lt;h1 id=&#34;my-personal-use-case&#34;&gt;My Personal Use Case&lt;/h1&gt;
+&lt;p&gt;I love Fedora, and made it my distribution of choice on my new Framework laptop (post coming soon on it?). However, despite its bleeding-edge approach to packages, there were two packages that weren&amp;rsquo;t quite up to date as much as I&amp;rsquo;d like:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Hugo&lt;/strong&gt; (which is what I used to build this site), which at the time of writing, was on version &amp;lsquo;80&amp;rsquo; making it ~10 versions behind the latest.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Go&lt;/strong&gt;. Fedora has the latest patches for version 1.16, however at the time of writing, 1.17 is the latest version and not available in the Fedora 35 repos.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;As it turns out, using a container is a perfect way to solve this. But see the problem with Toolbox in this scenario? All I&amp;rsquo;d be doing is replicating a Fedora environment in a Toolbox container (and thus, using the &amp;lsquo;older&amp;rsquo; versions I don&amp;rsquo;t want to use), so that wouldn&amp;rsquo;t help me out much.&lt;/p&gt;
+&lt;h1 id=&#34;distrobox-to-the-rescue&#34;&gt;Distrobox to the Rescue&lt;/h1&gt;
+&lt;p&gt;As you may have guessed based on the purpose of this post, Distrobox satisfied my use case beautifully. What I decided to do was to spin up an Arch Linux container in Distrobox on my Fedora system. The Arch repos had the complete updated versions for both Hugo and Go.&lt;/p&gt;
+&lt;p&gt;So, for the sake of brevity, I installed Distrobox using &lt;a href=&#34;https://github.com/89luca89/distrobox#installation&#34;&gt;its installation instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Then, I used Podman to pull down the latest &lt;code&gt;archlinux&lt;/code&gt; image:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;podman pull archlinux &lt;span style=&#34;color:#75715e&#34;&gt;# then selected the latest image from docker.io&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now we can create the container using Distrobox with the &lt;code&gt;distrobox-create&lt;/code&gt; command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;distrobox-create --image archlinux --name dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To break things down a bit in this case, the &lt;code&gt;distrobox-create&lt;/code&gt; command created a new container named &lt;code&gt;dev&lt;/code&gt; using the &lt;code&gt;archlinux&lt;/code&gt; image I pulled using podman earlier.&lt;/p&gt;
+&lt;p&gt;And then I was able to enter into the container using the &lt;code&gt;distrobox-enter&lt;/code&gt; command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;distrobox-enter --name dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And voila, that terminal session will be entered into the &lt;code&gt;dev&lt;/code&gt; container. I was able to use pacman to install Hugo / Go, and continue on my merry-way.&lt;/p&gt;
+&lt;h1 id=&#34;wsl&#34;&gt;WSL&lt;/h1&gt;
+&lt;p&gt;As a new developer who is still trying to figure out shortcuts / new ways of tackling issues in my workflow, I want to give a shoutout to WSL for making me aware of how this containerized approach can help me. Specifically, WSL 2 with its GUI support allowed me to install Firefox using an Arch image in WSL, and it showed up in the start menu without an issue.&lt;/p&gt;
+&lt;p&gt;I do not prefer using Windows as a development machine, but this was a workflow addition I was happy to see Distrobox make easy on Linux.&lt;/p&gt;
 </content>
     </item>
     

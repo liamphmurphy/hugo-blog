@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Distrobox - A great item in the Linux toolbelt :: Liam Murphy - Golang, API Development, Linux, Open Source, and more.</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="What is Distrobox? Per their Github Page, Distrobox is a way to &amp;ldquo;use any Linux distribution inside your terminal&amp;rdquo; using either Podman or Docker. In a sense, Distrobox is a simple front-end for Podman/Docker to easily create containers using any Linux environment of your choosing (as long as that environment has a container image), and providing some nice OOTB features such as being able to launch graphical apps, access external USB devices, etc." />
+<meta name="keywords" content="golang, api, api development, linux, open-source, open source, software, software development" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://phmurphy.com/posts/distrobox-toolbelt/" />
+
+
+
+
+<link rel="stylesheet" href="https://phmurphy.com/assets/style.css">
+
+  <link rel="stylesheet" href="https://phmurphy.com/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://phmurphy.com/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://phmurphy.com/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="https://twitter.com/LimePH" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Distrobox - A great item in the Linux toolbelt">
+<meta property="og:description" content="What is Distrobox? Per their Github Page, Distrobox is a way to &amp;ldquo;use any Linux distribution inside your terminal&amp;rdquo; using either Podman or Docker. In a sense, Distrobox is a simple front-end for Podman/Docker to easily create containers using any Linux environment of your choosing (as long as that environment has a container image), and providing some nice OOTB features such as being able to launch graphical apps, access external USB devices, etc." />
+<meta property="og:url" content="https://phmurphy.com/posts/distrobox-toolbelt/" />
+<meta property="og:site_name" content="Liam Murphy - Golang, API Development, Linux, Open Source, and more." />
+
+  
+    <meta property="og:image" content="https://phmurphy.com/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-12-23 01:11:39 -0500 EST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Liam Murphy - Golang, API Development, Linux, and more.
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/">Home</a></li>
+        
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/socials">Socials</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/">Home</a></li>
+      
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/socials">Socials</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://phmurphy.com/posts/distrobox-toolbelt/">Distrobox - A great item in the Linux toolbelt</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-12-23
+        
+      </span>
+    
+    
+    
+  </div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="what-is-distrobox">What is Distrobox?<a href="#what-is-distrobox" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Per their <a href="https://github.com/89luca89/distrobox">Github Page</a>, Distrobox is a way to &ldquo;use any Linux distribution inside your terminal&rdquo; using either Podman or Docker. In a sense, Distrobox is a simple front-end for Podman/Docker to easily create containers using any Linux environment of your choosing (as long as that environment has a container image), and providing some nice OOTB features such as being able to launch graphical apps, access external USB devices, etc. This is possible without Distrobox, but it does make it a lot simpler.</p>
+<h1 id="containerization">Containerization<a href="#containerization" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Containerization, from the perspective of a developer on their local machine, provides a great benefit in the ability
+to create separate &ldquo;environments&rdquo; from their base system where they can tinker with new languages, libraries, etc, without the fear of potentially breaking their base system in some way.</p>
+<p>On Fedora systems, there is a handy tool called <a href="https://github.com/containers/toolbox">Toolbox</a>, so why not use Toolbox instead (since I am currently using Fedora)?</p>
+<h1 id="so-how-is-distrobox-different">So, How is Distrobox Different?<a href="#so-how-is-distrobox-different" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>At the risk of over-simplifying Distrobox, from my perspective, it does two things differently from any other solution right now;</p>
+<ol>
+<li>
+<p>Distrobox is a series of POSIX shell scripts, making compatibility a primary feature, whereas Toolbox is a Go program that is geared toward Fedora systems.</p>
+</li>
+<li>
+<p>One of Distrobox&rsquo;s primary goals it to support the containerization of &ldquo;any&rdquo; Linux environment.</p>
+</li>
+</ol>
+<p>I&rsquo;m going to focus on and discuss #2 in the above list.</p>
+<h1 id="my-personal-use-case">My Personal Use Case<a href="#my-personal-use-case" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>I love Fedora, and made it my distribution of choice on my new Framework laptop (post coming soon on it?). However, despite its bleeding-edge approach to packages, there were two packages that weren&rsquo;t quite up to date as much as I&rsquo;d like:</p>
+<ol>
+<li><strong>Hugo</strong> (which is what I used to build this site), which at the time of writing, was on version &lsquo;80&rsquo; making it ~10 versions behind the latest.</li>
+<li><strong>Go</strong>. Fedora has the latest patches for version 1.16, however at the time of writing, 1.17 is the latest version and not available in the Fedora 35 repos.</li>
+</ol>
+<p>As it turns out, using a container is a perfect way to solve this. But see the problem with Toolbox in this scenario? All I&rsquo;d be doing is replicating a Fedora environment in a Toolbox container (and thus, using the &lsquo;older&rsquo; versions I don&rsquo;t want to use), so that wouldn&rsquo;t help me out much.</p>
+<h1 id="distrobox-to-the-rescue">Distrobox to the Rescue<a href="#distrobox-to-the-rescue" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>As you may have guessed based on the purpose of this post, Distrobox satisfied my use case beautifully. What I decided to do was to spin up an Arch Linux container in Distrobox on my Fedora system. The Arch repos had the complete updated versions for both Hugo and Go.</p>
+<p>So, for the sake of brevity, I installed Distrobox using <a href="https://github.com/89luca89/distrobox#installation">its installation instructions</a>.</p>
+<p>Then, I used Podman to pull down the latest <code>archlinux</code> image:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">podman pull archlinux <span style="color:#75715e"># then selected the latest image from docker.io</span>
+</code></pre></div><p>Now we can create the container using Distrobox with the <code>distrobox-create</code> command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">distrobox-create --image archlinux --name dev
+</code></pre></div><p>To break things down a bit in this case, the <code>distrobox-create</code> command created a new container named <code>dev</code> using the <code>archlinux</code> image I pulled using podman earlier.</p>
+<p>And then I was able to enter into the container using the <code>distrobox-enter</code> command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">distrobox-enter --name dev
+</code></pre></div><p>And voila, that terminal session will be entered into the <code>dev</code> container. I was able to use pacman to install Hugo / Go, and continue on my merry-way.</p>
+<h1 id="wsl">WSL<a href="#wsl" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>As a new developer who is still trying to figure out shortcuts / new ways of tackling issues in my workflow, I want to give a shoutout to WSL for making me aware of how this containerized approach can help me. Specifically, WSL 2 with its GUI support allowed me to install Firefox using an Arch image in WSL, and it showed up in the start menu without an issue.</p>
+<p>I do not prefer using Windows as a development machine, but this was a workflow addition I was happy to see Distrobox make easy on Linux.</p>
+
+      </div></div>
+
+  
+  
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://phmurphy.com/assets/main.js"></script>
+<script src="https://phmurphy.com/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
