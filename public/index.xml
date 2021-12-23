@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Liam Murphy - Golang, API Development, Linux, Open Source, and more.</title>
-    <link>https://example.org/</link>
+    <link>https://liamphmurphy.github.io/</link>
     <description>Recent content on Liam Murphy - Golang, API Development, Linux, Open Source, and more.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Dec 2021 01:11:39 -0500</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Dec 2021 01:11:39 -0500</lastBuildDate><atom:link href="https://liamphmurphy.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>https://example.org/blog/my-first-post/</link>
+      <link>https://liamphmurphy.github.io/blog/my-first-post/</link>
       <pubDate>Wed, 22 Dec 2021 01:11:39 -0500</pubDate>
       
-      <guid>https://example.org/blog/my-first-post/</guid>
+      <guid>https://liamphmurphy.github.io/blog/my-first-post/</guid>
       <description>Test Heading With some test text</description>
       <content>&lt;h1 id=&#34;test-heading&#34;&gt;Test Heading&lt;/h1&gt;
 &lt;p&gt;With some test text&lt;/p&gt;
@@ -21,10 +21,10 @@
     
     <item>
       <title>About</title>
-      <link>https://example.org/about/</link>
+      <link>https://liamphmurphy.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/about/</guid>
+      <guid>https://liamphmurphy.github.io/about/</guid>
       <description>Hello there! My name is Liam Murphy, a software developer who (like many others) is interested in open-source, tech, and how software can be used to make our daily lives at least a little bit easier. If you would like to indulge my ego and read a bit more about me, below is some more information!
 Day Job Usual disclaimer: Everything expressed on this website is my own opinion; and not that of my employer(s).</description>
       <content>&lt;p&gt;Hello there! My name is Liam Murphy, a software developer who (like many others) is interested in open-source, tech, and how software can be used to make our daily lives at least a little bit easier. If you would like to indulge my ego and read a bit more about me, below is some more information!&lt;/p&gt;
@@ -38,10 +38,10 @@ Day Job Usual disclaimer: Everything expressed on this website is my own opinion
     
     <item>
       <title>Liam Murphy - Home</title>
-      <link>https://example.org/home/</link>
+      <link>https://liamphmurphy.github.io/home/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/home/</guid>
+      <guid>https://liamphmurphy.github.io/home/</guid>
       <description>This is the home page!</description>
       <content>&lt;p&gt;This is the home page!&lt;/p&gt;
 </content>
@@ -49,10 +49,10 @@ Day Job Usual disclaimer: Everything expressed on this website is my own opinion
     
     <item>
       <title>Social Media</title>
-      <link>https://example.org/socials/</link>
+      <link>https://liamphmurphy.github.io/socials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/socials/</guid>
+      <guid>https://liamphmurphy.github.io/socials/</guid>
       <description>As the young (hip? cool?) kids would say, here is a list of some of my &amp;ldquo;socials&amp;rdquo;. Feel free to reach out!
  Twitter LinkedIn  You can also send me an email at liam@phmurphy.com</description>
       <content>&lt;p&gt;As the young (hip? cool?) kids would say, here is a list of some of my &amp;ldquo;socials&amp;rdquo;. Feel free to reach out!&lt;/p&gt;
