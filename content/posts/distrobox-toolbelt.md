@@ -63,10 +63,32 @@ distrobox-enter --name dev
 
 And voila, that terminal session will be entered into the `dev` container. I was able to use pacman to install Hugo / Go, and continue on my merry-way.
 
-# WSL
+# Running GUI Apps from the Host
 
-As a new developer who is still trying to figure out shortcuts / new ways of tackling issues in my workflow, I want to give a shout-out to WSL for making me aware of how this containerized approach can help me. Specifically, WSL 2 with its GUI support allowed me to install Firefox using an Arch image in WSL, and it showed up in the start menu without an issue. I don't have many practical uses for this, but it was very cool to see work!
+Perhaps the biggest (and pleasant) surprise of Distrobox is the ability to `export` apps from the container to the host machine. In other words, you can install a command line tool or a GUI app and have the ability to launch it from the host (and in an app launcher in the case of GUI apps with a `.desktop` file) without having to enter the container.
 
-I do not prefer using Windows as a development machine, but this was a workflow addition I was happy to see Distrobox make easy on Linux, and WSL made me aware of it. 
+Say I wanted to install Discord, which isn't in the Fedora repos, and for whatever reason I didn't want the Flatpak version. I can install it through the Arch container:
 
-As a side note, I'm curious on whether it'd be possible for GUI applications in Distrobox to show up as a desktop application on the base system. As a Fedora user, I could see the benefit of installing a lesser-known GUI application from the AUR, but be able to easily access it from my search menu, as if it was natively installed. 
+```bash
+sudo pacman -S discord
+```
+
+I can launch that from within the container using the command:
+
+```bash
+discord
+```
+
+and it will launch, really cool stuff! But if we want to be able to launch Discord from the host app launcher, we can run the `distrobox-export` command from **within** the container, like so:
+
+```bash
+distrobox-export --app discord
+```
+
+I was already happy to see this work, but a little icing on the cake, was that launching Discord both from the container and from my app launcher after I exported it had the app indicator working!
+
+# Only the Beginning?
+
+Distrobox is a relatively new program and there are likely to be some bugs / rough edges. I'd only recommend this to "power users" or those who are okay with learning what containers are for the first time. But it's off to a great start, and I'm looking forward to seeing where it goes from here. 
+
+For me, I may experiment with using an immutable OS (such as Fedora Silverblue or OpenSUSE MicroOS) and seeing the experience of using apps from a Distrobox container if I can't find / use the Flatpak version.
